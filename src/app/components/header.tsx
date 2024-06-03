@@ -1,6 +1,8 @@
 "use client"
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
+import shop from "@/../../public/shop.svg"
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -23,7 +25,9 @@ export default function Header() {
                 <Link href="#" className="hover:text-[#D87D4A]">SPEAKERS</Link>
                 <Link href="#" className="hover:text-[#D87D4A]">EARPHONES</Link>
             </div>
-            <div className="sm:flex ">Shop</div>
+            <div className="sm:flex ">
+                <Image src={shop} alt="Shop" className="w-full h-full"/>
+            </div>
         </div>
     </div>
     )
