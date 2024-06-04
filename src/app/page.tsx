@@ -4,6 +4,8 @@ import FirstSection from "./components/FirstSection";
 import ListDevice from "./components/ListDevice";
 import InfoSpeakers from "./components/InfoSpeakers";
 import SeeProduct from "./components/SeeProduct";
+import Ecouteur from "./components/Ecouteur";
+import About from "./components/About";
 
 export default function Home() {
   return (
@@ -13,7 +15,9 @@ export default function Home() {
       <ListDevice />
       <InfoSpeakers />
       <SeeProduct />
-      <div className="w-16 h-16"></div>
+      <Ecouteur />
+      <About />
+      <div className="w-10 h-20"></div>
     </main>
   );
 }
