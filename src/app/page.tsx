@@ -6,6 +6,7 @@ import InfoSpeakers from "./components/InfoSpeakers";
 import SeeProduct from "./components/SeeProduct";
 import Ecouteur from "./components/Ecouteur";
 import About from "./components/About";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -17,7 +18,8 @@ export default function Home() {
       <SeeProduct />
       <Ecouteur />
       <About />
-      <div className="w-10 h-20"></div>
+      <Footer />
+
     </main>
   );
 }
