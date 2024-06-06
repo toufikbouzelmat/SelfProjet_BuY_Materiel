@@ -3,6 +3,9 @@ import HeadphoneProduct from "./components/HeadphoneProduct";
 import Product1Headphone from "@/../../public/Product1Headphone.svg"
 import Product2Headphone from "@/../../public/Product2Headphone.svg"
 import Product3Headphone from "@/../../public/Product3Headphone.svg"
+import ListDevice from "../components/ListDevice";
+import About from "../components/About";
+import Footer from "../components/Footer";
 
 export default function Headphones()
 {
@@ -45,6 +48,15 @@ export default function Headphones()
                 ))
 
             }
+            <div className="mt-20">
+                <ListDevice />
+            </div>
+            <div className="mt-20">
+                <About />
+            </div>
+            <div className="mt-20">
+                <Footer />
+            </div>
         </div>
     )
 }

@@ -3,13 +3,20 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import shop from "@/../../public/shop.svg"
+import { useRouter } from 'next/navigation';
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const router = useRouter();
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
+
+    const toHeadphones = () => {
+        router.push(`Headphones/`)
+    }
+
     return (
         <div className="w-full h-[100px] bg-[#101010] text-white flex items-center justify-center">
         <div className="w-[80%] h-full flex justify-between items-center border-b-2 border-b-[white]">
@@ -20,9 +27,9 @@ export default function Header() {
             </div>
             <div className="sm:flex ">Logo</div>
             <div className={`flex  flex-col gap-4 ${menuOpen ? 'flex' : 'hidden'} sm:flex sm:flex-row`}>
-                <Link href="#" className="hover:text-[#D87D4A]">HOME</Link>
-                <Link href="#" className="hover:text-[#D87D4A]">HEADPHONES</Link>
-                <Link href="#" className="hover:text-[#D87D4A]">SPEAKERS</Link>
+                <Link href="./"  className="hover:text-[#D87D4A]">HOME</Link>
+                <Link href="/Headphones/"  className="hover:text-[#D87D4A]">HEADPHONES</Link>
+                <Link href="/Speakers/" className="hover:text-[#D87D4A]">SPEAKERS</Link>
                 <Link href="#" className="hover:text-[#D87D4A]">EARPHONES</Link>
             </div>
             <div className="sm:flex ">
