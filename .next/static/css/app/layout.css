@@ -724,6 +724,9 @@ video {
 .w-full {
   width: 100%;
 }
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
 .flex-col {
   flex-direction: column;
 }

@@ -40,6 +40,7 @@ export default function Headphones()
                         title = {list.title}
                         name = {list.name}
                         description = {list.description}
+                        reverse={index % 2 !== 0}
                     />
                 ))
 

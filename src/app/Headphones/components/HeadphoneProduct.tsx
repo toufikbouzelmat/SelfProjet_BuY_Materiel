@@ -2,11 +2,11 @@ import Image from "next/image"
 
 
 
-export default function HeadphoneProduct({imgProduct, title, name, description }: any)
+export default function HeadphoneProduct({imgProduct, title, name, description, reverse }: any)
 {
     return (
         <div className="w-full h-[500px]  flex justify-center mt-16">
-            <div className="w-[80%] h-full  flex justify-between">
+            <div className={`w-[80%] h-full flex justify-between ${reverse ? 'flex-row-reverse' : ''}`}>
                 <div className="border-2 w-[500px]  h-full flex justify-center items-center bg-[#e9e8e8]">
                     <Image src={imgProduct} alt="Product1Headphone" />
                 </div>
