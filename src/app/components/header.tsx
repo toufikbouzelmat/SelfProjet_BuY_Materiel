@@ -30,7 +30,7 @@ export default function Header() {
                 <Link href="./"  className="hover:text-[#D87D4A]">HOME</Link>
                 <Link href="/Headphones/"  className="hover:text-[#D87D4A]">HEADPHONES</Link>
                 <Link href="/Speakers/" className="hover:text-[#D87D4A]">SPEAKERS</Link>
-                <Link href="#" className="hover:text-[#D87D4A]">EARPHONES</Link>
+                <Link href="/Eraphones/" className="hover:text-[#D87D4A]">EARPHONES</Link>
             </div>
             <div className="sm:flex ">
                 <Image src={shop} alt="Shop" className="w-full h-full"/>

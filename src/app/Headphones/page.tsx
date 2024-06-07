@@ -11,18 +11,21 @@ export default function Headphones()
 {
     const cardsData = [
         {
+            id: '1',
             imgProduct: Product1Headphone,
             title: 'NEW PRODUCT',
             name: 'XX99 Mark II Headphones',
             description: 'The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.',
         },
         {
+            id: '2',
             imgProduct: Product2Headphone,
             title: '',
             name: 'XX99 Mark II Headphones',
             description: 'The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.',
         },
         {
+            id: '3',
             imgProduct: Product3Headphone,
             title: '',
             name: 'XX59 Mark II Headphones',
@@ -39,6 +42,7 @@ export default function Headphones()
                 cardsData.map((list, index) => (
                     <HeadphoneProduct 
                         key = {index}
+                        id = {list.id}
                         imgProduct = {list.imgProduct}
                         title = {list.title}
                         name = {list.name}

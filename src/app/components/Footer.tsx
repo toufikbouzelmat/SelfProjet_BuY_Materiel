@@ -19,10 +19,10 @@ export default function Footer()
                     </div>
                     <div className="w-[50%] h-full  flex flex-col justify-around">
                        <div className="flex justify-between mx-2 text-white ">
-                            <Link href="#" className="hover:text-[#D87D4A]" >HOME</Link>
-                            <Link href="#" className="hover:text-[#D87D4A]">HEADPHONES</Link>
-                            <Link href="#" className="hover:text-[#D87D4A]">SPEAKERS</Link>
-                            <Link href="#" className="hover:text-[#D87D4A]">EARPHONES</Link>
+                            <Link href="/" className="hover:text-[#D87D4A]" >HOME</Link>
+                            <Link href="/Headphones/" className="hover:text-[#D87D4A]">HEADPHONES</Link>
+                            <Link href="/Speakers/" className="hover:text-[#D87D4A]">SPEAKERS</Link>
+                            <Link href="/Eraphones/" className="hover:text-[#D87D4A]">EARPHONES</Link>
                        </div>
                        <div className="flex justify-end ">
                             <Image src={facebook} alt="facebook" className="hover:bg-[#D87D4A]"/>

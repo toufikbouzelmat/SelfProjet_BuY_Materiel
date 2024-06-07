@@ -1,6 +1,7 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/Headphones/page": "app/Headphones/page.js",
   "/page": "app/page.js",
-  "/Speakers/page": "app/Speakers/page.js"
+  "/Headphones/page": "app/Headphones/page.js",
+  "/[productid]/page": "app/[productid]/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }
