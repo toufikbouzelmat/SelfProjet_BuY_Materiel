@@ -6,6 +6,9 @@ import Header from '@/app/components/header';
 import ProductInfo from './components/ProductInfo';
 import PhotoProducts from './components/PhotoProducts';
 import ProductRecommendation from './components/ProductRecommendation';
+import ListDevice from '@/app/components/ListDevice';
+import About from '@/app/components/About';
+import Footer from '@/app/components/Footer';
 
 
 
@@ -31,6 +34,15 @@ export default function ProductPage() {
             <ProductInfo />
             <PhotoProducts />
             <ProductRecommendation />
+            <div className="mt-20">
+                <ListDevice />
+            </div>
+            <div className="mt-20">
+                <About />
+            </div>
+            <div className="mt-20">
+                <Footer />
+            </div>
         </div>
     );
 }
