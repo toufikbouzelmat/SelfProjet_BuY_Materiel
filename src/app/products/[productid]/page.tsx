@@ -2,6 +2,10 @@
 import { useParams, notFound } from 'next/navigation';
 import CartProduct from '../../components/CartProduct'; // Mettez à jour le chemin en fonction de votre structure de projet
 import products from './../products'; // Importez vos produits
+import Header from '@/app/components/header';
+import ProductInfo from './components/ProductInfo';
+import PhotoProducts from './components/PhotoProducts';
+import ProductRecommendation from './components/ProductRecommendation';
 
 
 
@@ -16,6 +20,7 @@ export default function ProductPage() {
 
     return (
         <div>
+            <Header />
             <CartProduct 
                 imgProduct={product.imgProduct} 
                 title={product.title} 
@@ -23,6 +28,9 @@ export default function ProductPage() {
                 description={product.description} 
                 reverse={product.reverse} 
             />
+            <ProductInfo />
+            <PhotoProducts />
+            <ProductRecommendation />
         </div>
     );
 }
