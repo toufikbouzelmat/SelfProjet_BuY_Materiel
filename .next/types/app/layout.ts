@@ -1,4 +1,4 @@
-// File: /home/taoufik/Bureau/SelfProjet_BuY_Materiel/src/app/layout.tsx
+// File: /goinfre/tbouzalm/SelfProjet_BuY_Materiel/src/app/layout.tsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

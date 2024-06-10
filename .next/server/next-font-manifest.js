@@ -1,1 +1,1 @@
-self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/home/taoufik/Bureau/SelfProjet_BuY_Materiel/src/app/layout\":[]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/goinfre/tbouzalm/SelfProjet_BuY_Materiel/src/app/layout\":[\"static/media/c9a5bc6a7c948fb0-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"

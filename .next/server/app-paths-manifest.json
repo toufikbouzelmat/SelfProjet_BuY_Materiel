@@ -1,6 +1,4 @@
 {
-  "/page": "app/page.js",
   "/Headphones/page": "app/Headphones/page.js",
-  "/products/[productid]/page": "app/products/[productid]/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/products/[productid]/page": "app/products/[productid]/page.js"
 }

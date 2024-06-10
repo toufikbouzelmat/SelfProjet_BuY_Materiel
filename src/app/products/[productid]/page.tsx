@@ -9,7 +9,8 @@ import ProductRecommendation from './components/ProductRecommendation';
 import ListDevice from '@/app/components/ListDevice';
 import About from '@/app/components/About';
 import Footer from '@/app/components/Footer';
-
+import CardProduit from './components/CardProduit';
+import Link from 'next/link';
 
 
 export default function ProductPage() {
@@ -24,7 +25,12 @@ export default function ProductPage() {
     return (
         <div>
             <Header />
-            <CartProduct 
+            <div className='w-[100%] h-[100px] flex justify-center '>
+                <div className='w-[80%] h-full  flex items-center'>
+                    <Link href="/Headphones/" className='text-[#9a9a9a]'>Go Back</Link>
+                </div>
+            </div>
+            <CardProduit 
                 imgProduct={product.imgProduct} 
                 title={product.title} 
                 name={product.name} 
