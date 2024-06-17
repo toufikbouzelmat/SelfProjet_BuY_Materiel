@@ -1,7 +1,13 @@
 import Image from "next/image"
+import { useState } from "react";
 
 export default function CardProduit({imgProduct, title, name, description, reverse }: any)
 {
+
+        const [showpop, setshowpop] = useState(false);
+
+   
+
     return (
         <div className="w-full h-[500px]  flex justify-center mt-16">
             <div className={`w-[80%] h-full flex justify-between ${reverse ? 'flex-row-reverse' : ''}`}>
@@ -20,11 +26,14 @@ export default function CardProduit({imgProduct, title, name, description, rever
                             <button className="text-[#9a9a9a]">+</button>
                         </div>
                         <div className="w-[180px] h-full bg-[#D87D4A] flex justify-center items-center">
-                            <button className="text-white">ADD TO CART</button>
+                            <button className="text-white" onClick={() => setshowpop(true)}>ADD TO CART</button>
                         </div>
                     </div>
-                    {/* <button className="text-white text-center w-[160px] h-[48px] bg-[#D87D4A] mt-6 ml-20">SEE PRODUCT</button> */}
+                    
                 </div>
+            {/* {showpop &&
+             <div className="w-full h-full  bg-black opactity-[60%]">
+            </div>} */}
             </div>
         </div>
     )
