@@ -1,20 +1,53 @@
 import Image from "next/image"
-import { useState } from "react";
+import ItemsProduct from "./ItemsProduct";
+import { MouseEvent, useEffect, useRef, useState } from "react";
+import  router, { useRouter }  from "next/navigation"
 
 export default function CardProduit({imgProduct, title, name, description, reverse }: any)
 {
 
+    const router = useRouter();
+
         const [showpop, setshowpop] = useState(false);
 
+        const toggleButtonRef = useRef<HTMLDivElement | null>(null);
+
+    const handleClickOutside = (event: MouseEvent<HTMLDivElement>) => {
+        if (
+                toggleButtonRef.current &&
+                !toggleButtonRef.current.contains(event.target as HTMLDivElement)
+                ) 
+                    {
+                        setshowpop(false);
+                    }
+  };
+
+
+  useEffect(() => {
+    document.addEventListener(
+      "click",
+      handleClickOutside as unknown as (event: Event) => void
+    );
+
+    return () => {
+      document.removeEventListener(
+        "click",
+        handleClickOutside as unknown as (event: Event) => void
+      );
+    };
+  }, [showpop]);
    
 
     return (
+        <>
         <div className="w-full h-[500px]  flex justify-center mt-16">
-            <div className={`w-[80%] h-full flex justify-between ${reverse ? 'flex-row-reverse' : ''}`}>
+    
+            <div className={`w-[80%] h-full flex justify-between  ${reverse ? 'flex-row-reverse' : ''}`}>
                 <div className="border-2 w-[500px]  h-full flex justify-center items-center bg-[#e9e8e8]">
                     <Image src={imgProduct} alt="Product1Headphone" />
                 </div>
                 <div className=" w-[500px] h-full flex flex-col justify-center  gap-7">
+                     
                     <h1 className="text-[#D87D4A] ml-20 tracking-[.50em]">{title}</h1>
                     <h3 className="font-bold ml-20">{name}</h3>
                     <p className="text-[#c9c9c9] ml-20">{description}</p>
@@ -29,12 +62,39 @@ export default function CardProduit({imgProduct, title, name, description, rever
                             <button className="text-white" onClick={() => setshowpop(true)}>ADD TO CART</button>
                         </div>
                     </div>
-                    
+            
                 </div>
-            {/* {showpop &&
-             <div className="w-full h-full  bg-black opactity-[60%]">
-            </div>} */}
+          
             </div>
         </div>
+        
+        {showpop ? (
+            <div className="fixed top-0 left-0 w-[100%] h-full bg-[black]  flex items-center justify-center bg-opacity-40 " >
+                <div className="w-[80%] h-full flex  items-center justify-end">
+
+                    <div ref={toggleButtonRef} className="w-[350px] h-[450px]  bg-[white]">
+                        <div  className="w-[300px] h-[420px]  mx-6 my-4 flex flex-col ">
+                            <div className="w-full h-[60px]  flex justify-between items-center">
+                                <div className="font-bold tracking-[.20em]">CART (3)</div>
+                                <button className="text-[#C2C2C2] underline decoration-solid">Remove all</button>
+                            </div>
+                            <div className="w-full h-[300px] ">
+                                <ItemsProduct />
+                            </div>
+                            <div className="w-full h-[40px] flex justify-between items-center">
+                                <div className="text-[#C2C2C2]">Total</div>
+                                <div className="font-bold ">$ 5.999</div>
+                            </div>
+                            <div className="w-full h-[60px] bg-[#D87D4A] flex items-center justify-center">
+                                <button className="text-[white]" onClick={() => router.push("./../Checkout") }>CHECKOUT</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        ): null}
+
+    </>
     )
+    
 }
