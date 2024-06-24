@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Header from "./components/header";
 import FirstSection from "./components/FirstSection";
@@ -10,6 +11,8 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
+
+
     <main className="flex flex-col  ">
       <Header />
       <FirstSection />
@@ -21,5 +24,6 @@ export default function Home() {
       <Footer />
 
     </main>
+    
   );
 }

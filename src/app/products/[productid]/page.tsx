@@ -33,7 +33,8 @@ export default function ProductPage() {
             <CardProduit 
                 imgProduct={product.imgProduct} 
                 title={product.title} 
-                name={product.name} 
+                name={product.name}
+                price={product.price} 
                 description={product.description} 
                 reverse={product.reverse} 
             />
